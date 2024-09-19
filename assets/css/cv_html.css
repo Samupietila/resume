@@ -288,7 +288,7 @@ body {
   stroke: var(--profile-theme);
   stroke-linecap: round;
   stroke-dashoffset: 0;
-  stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
+  stroke-dasharray: calc(var(--MATH-PI) * 53 * 2);
   transition: all 0.8s;
   transition-timing-function: cubic-bezier(0.64, 0.51, 0.16, 0.86);
 }
@@ -306,12 +306,12 @@ body {
 .tool-list > li > .tl-name {
   top: 40%;
   font-size: 1rem;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
 }
 .tool-list > li > .tl-exp {
   top: calc(50% + 1.4rem);
   font-size: 1rem;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
 }
 /* Interests Section */
 .outer-frame {

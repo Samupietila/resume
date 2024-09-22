@@ -1,47 +1,105 @@
 :root {
-  --color-gray-light-1: #f8f8f8;
-  --color-gray-light-2: #e9e9e9;
-  --color-gray-light-3: #dedede;
-  --color-gray-dark-1: #545454;
+  --color-intro: #f8f8f8;
+  --color-wrapper: #e9e9e9;
+  --color-body: #dedede;
+  --color-intro-text: #545454;
   --color-gray-dark-2: #737373;
   --color-gray-dark-3: #9a9a9a;
   --color-blue-dark-1: #00387f;
-  --color-tiffany: #00a6a6;
+  /* --color-hover: #737373; */
+  /* --profile-theme: rgb(227, 16, 27); */
+  /* --timeline-circle-theme: #14253e; */
+  --footer-theme: rgb(33, 33, 33);
+
+  --font-family-h1: "Oswald", sans-serif;
+  --font-family-h2: none;
+  --font-family-h3: none;
+  --font-family-text: "Open Sans", sans-serif;
+  --font-family-code: none;
+
+  /* DEFAULTS */
+  /* --color-intro: #f8f8f8;
+  --color-wrapper: #e9e9e9;
+  --color-body: #dedede;
+  --color-intro-text: #545454;
+  --color-gray-dark-2: #737373;
+  --color-gray-dark-3: #9a9a9a;
+  --color-blue-dark-1: #00387f; */
+  --color-hover: #00a6a6;
   --profile-theme: #4682bf;
   --timeline-circle-theme: #14253e;
 
   --pgbar-length: 100%;
-
+  --footer-height: 5rem;
   --MATH-PI: 3.1415px;
   --percent: 100;
 }
 
 html {
   font-size: 100%;
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--font-family-text);
 }
 
 * {
   box-sizing: border-box;
+}
+/* FONT FAMILIES */
+.name {
+  font-family: var(--font-family-h1);
+  font-weight: 700;
+  font-style: oblique;
+  text-decoration: underline;
+}
+.profession {
+  font-family: var(--font-family-h1);
+  font-weight: 700;
+  font-style: oblique;
+}
+.title {
+  font-family: var(--font-family-h1);
+  font-weight: 700;
+  font-style: oblique;
+}
+.paragraph {
+  font-family: var(--font-family-text);
+}
+.header1 {
+  font-family: var(--font-family-h1);
+  font-weight: 700;
+  font-style: oblique;
+}
+.text1 {
+  font-family: var(--font-family-text);
+}
+.footer {
+  font-family: var(--font-family-text);
+  background-color: var(--footer-theme);
+  height: var(--footer-height);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   padding: 3rem 1rem;
   min-height: 100vh;
-  background-color: var(--color-gray-light-3);
+  background-color: var(--color-body);
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 70rem;
-  background-color: var(--color-gray-light-2);
+  background-color: var(--color-wrapper);
   display: flex;
 }
 
 .intro {
   flex: 0 0 250px;
-  background-color: var(--color-gray-light-1);
+  background-color: var(--color-intro);
   z-index: 5;
 }
 .profile {
@@ -60,7 +118,7 @@ body {
   width: 100%;
   height: 30px;
   background-color: var(--profile-theme);
-  transform: skewY(-3deg);
+  transform: skewY(-1deg);
 }
 .photo img {
   width: 80%;
@@ -74,20 +132,20 @@ body {
 .bio .name {
   font-size: 1.5rem;
   text-align: center;
-  color: var(--color-gray-light-1);
+  color: var(--color-wrapper);
   margin: 0;
   margin-top: 1rem;
 }
 .bio .profession {
   font-size: 1rem;
   text-align: center;
-  color: var(--color-gray-light-1);
+  color: var(--color-wrapper);
   margin: 0;
 }
 
 .intro-section {
   padding: 0 1rem;
-  color: var(--color-gray-dark-1);
+  color: var(--color-intro-text);
 }
 .intro-section .title {
   font-size: 1rem;
@@ -128,7 +186,7 @@ body {
   height: 2px;
   background-color: var(--profile-theme);
   transition: width 0.3s;
-  /*transition-timing-function: cubic-bezier(.64,.51,.16,.86);*/
+  /* transition-timing-function: cubic-bezier(0.64, 0.51, 0.16, 0.86); */
   transition-timing-function: cubic-bezier(0.92, 0.57, 0.33, 1.02);
   transform: translate(-50%, 0);
 }
@@ -145,6 +203,7 @@ body {
   flex: 1 0 0;
   background-color: white;
   padding: 2rem;
+  position: relative;
 }
 .detail:hover > .detail-section:not(:hover) {
   opacity: 0.3;
@@ -153,14 +212,17 @@ body {
   transition: all 0.3s;
 }
 .detail-section:not(:last-of-type) {
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
+}
+.footer-padding {
+  padding-bottom: var(--footer-height);
 }
 .detail-title {
   display: flex;
   align-items: center;
+  padding: 1rem 0;
 }
 .detail-section > .detail-content {
-  padding: 1.5rem;
   padding-left: 2rem;
   user-select: none;
 }
@@ -233,13 +295,13 @@ body {
   position: absolute;
   content: "";
   width: 3px;
-  height: 95%;
+  height: 90%;
   background-color: var(--timeline-circle-theme);
-  left: -3.5px;
-  top: 15px;
+  left: -0.5px;
+  top: 20px;
 }
 .timeline-block:hover h1 {
-  color: var(--color-tiffany);
+  color: var(--color-hover);
 }
 .timeline-block:hover::before {
   animation: circle 1.2s infinite;
@@ -249,13 +311,16 @@ body {
 .pg-list,
 .tool-list,
 .favor-list {
-  padding: 0;
   list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 .pg-list > li {
   margin: 0;
+  margin-left: 2rem;
   display: flex;
-  height: 2rem;
+  flex-direction: column;
 }
 
 .pg-list > li > span {
@@ -288,37 +353,38 @@ body {
   stroke: var(--profile-theme);
   stroke-linecap: round;
   stroke-dashoffset: 0;
-  stroke-dasharray: calc(var(--MATH-PI) * 53 * 2);
+  stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
   transition: all 0.8s;
   transition-timing-function: cubic-bezier(0.64, 0.51, 0.16, 0.86);
 }
 .tool-list > li:hover > svg > circle.cbar {
   stroke-width: 4px;
-  stroke: var(--color-tiffany);
+  stroke: var(--color-hover);
   stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
 }
 .tool-list > li > .tl-name,
 .tool-list > li > .tl-exp {
   position: absolute;
   left: 50%;
-  color: var(--color-gray-dark-1);
+  color: var(--color-intro-text);
 }
 .tool-list > li > .tl-name {
   top: 40%;
   font-size: 1rem;
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
 }
 .tool-list > li > .tl-exp {
   top: calc(50% + 1.4rem);
   font-size: 1rem;
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
 }
 /* Interests Section */
 .outer-frame {
 }
 .favor-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
 }
 .favor-list > li {
   display: flex;
@@ -326,8 +392,8 @@ body {
   justify-content: baseline;
   flex-direction: column;
   color: var(--profile-theme);
-
   transition: all 0.3s;
+  padding: 0.1rem;
 }
 .favor-list > li > i {
   display: inline-flex;
@@ -339,7 +405,7 @@ body {
 }
 .favor-list > li:hover {
   transform: scale(1.2);
-  color: var(--color-tiffany);
+  color: var(--color-hover);
 }
 .favor-list > li > span {
   font-size: 1rem;

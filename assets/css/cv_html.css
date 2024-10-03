@@ -11,7 +11,7 @@
   /* --timeline-circle-theme: #14253e; */
   --footer-theme: rgb(33, 33, 33);
 
-  --font-family-h1: "Oswald", sans-serif;
+  --font-family-h1: "PT Sans", Calibri, Tahoma, sans-serif;
   --font-family-h2: none;
   --font-family-h3: none;
   --font-family-text: "Open Sans", sans-serif;
@@ -47,18 +47,18 @@ html {
 .name {
   font-family: var(--font-family-h1);
   font-weight: 700;
-  font-style: oblique;
-  text-decoration: underline;
+  /* font-style: oblique; */
+  /* text-decoration: underline; */
 }
 .profession {
   font-family: var(--font-family-h1);
   font-weight: 700;
-  font-style: oblique;
+  /* font-style: oblique; */
 }
 .title {
   font-family: var(--font-family-h1);
   font-weight: 700;
-  font-style: oblique;
+  /* font-style: oblique; */
 }
 .paragraph {
   font-family: var(--font-family-text);
@@ -66,10 +66,14 @@ html {
 .header1 {
   font-family: var(--font-family-h1);
   font-weight: 700;
-  font-style: oblique;
+  /* font-style: oblique; */
 }
 .text1 {
   font-family: var(--font-family-text);
+}
+.letter-text1 {
+  font-family: var(--font-family-h1);
+  font-size: 1.5rem;
 }
 .footer {
   font-family: var(--font-family-text);

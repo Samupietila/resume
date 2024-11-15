@@ -10,11 +10,14 @@
   /* --profile-theme: rgb(227, 16, 27); */
   /* --timeline-circle-theme: #14253e; */
   --footer-theme: rgb(33, 33, 33);
-
-  --font-family-h1: "PT Sans", Calibri, Tahoma, sans-serif;
-  --font-family-h2: none;
-  --font-family-h3: none;
-  --font-family-text: "Open Sans", sans-serif;
+  /* Headers for cv */
+  --font-family-h1: "Work Sans", sans-serif;
+  /* Name font */
+  --font-family-h2: "Notable", sans-serif;
+  /* presentation font */
+  --font-family-h3: "Work Sans", sans-serif;
+  /* normal text in cvs */
+  --font-family-text: "Work Sans", sans-serif;
   --font-family-code: none;
 
   /* DEFAULTS */
@@ -26,7 +29,7 @@
   --color-gray-dark-3: #9a9a9a;
   --color-blue-dark-1: #00387f; */
   --color-hover: #00a6a6;
-  --profile-theme: #4682bf;
+  --profile-theme: rgb(12, 4, 68);
   --timeline-circle-theme: #14253e;
 
   --pgbar-length: 100%;
@@ -45,13 +48,13 @@ html {
 }
 /* FONT FAMILIES */
 .name {
-  font-family: var(--font-family-h1);
+  font-family: var(--font-family-h2);
   font-weight: 700;
-  /* font-style: oblique; */
+  font-style: italic;
   /* text-decoration: underline; */
 }
 .profession {
-  font-family: var(--font-family-h1);
+  font-family: var(--font-family-h3);
   font-weight: 700;
   /* font-style: oblique; */
 }
@@ -66,7 +69,7 @@ html {
 .header1 {
   font-family: var(--font-family-h1);
   font-weight: 700;
-  /* font-style: oblique; */
+  /* font-style: italic; */
 }
 .text1 {
   font-family: var(--font-family-text);

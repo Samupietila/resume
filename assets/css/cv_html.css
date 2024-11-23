@@ -16,13 +16,13 @@
   /* --timeline-circle-theme: #14253e; */
   --footer-theme: rgb(33, 33, 33);
   /* Headers for cv */
-  --font-family-h1: "Poppins", sans-serif;
+  --font-family-h1: "Inter", sans-serif;
   /* Name font */
-  --font-family-h2: "Poppins", sans-serif;
+  --font-family-h2: "Inter", sans-serif;
   /* presentation font */
-  --font-family-h3: "Poppins", sans-serif;
+  --font-family-h3: "Inter", sans-serif;
   /* normal text in cvs */
-  --font-family-text: "Poppins", sans-serif;
+  --font-family-text: "Inter", sans-serif;
   --font-family-code: none;
 
   /* DEFAULTS */
@@ -33,10 +33,11 @@
   --color-gray-dark-2: #737373;
   --color-gray-dark-3: #9a9a9a;
   --color-blue-dark-1: #00387f; */
-  --color-hover: rgb(204, 193, 158);
-  --profile-theme: black;
-  --timeline-circle-theme: rgb(204, 193, 158);
-  --secondary-color: rgb(204, 193, 158);
+  --color-hover: rgb(214, 24, 64);
+  --profile-theme: rgb(20, 28, 60);
+  --profile-font: rgb(214, 24, 64);
+  --timeline-circle-theme: rgb(214, 24, 64);
+  --secondary-color: rgb(243, 243, 243);
   --background-color: #f8f8f8;
 
   --pgbar-length: 100%;
@@ -82,7 +83,7 @@ html {
 }
 .text1 {
   font-family: var(--font-family-text);
-  color: var(--profile-theme);
+  color: var(--profile-font);
 }
 .letter-text1 {
   font-family: var(--font-family-h1);

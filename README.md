@@ -33,7 +33,7 @@ CasinoPoker is a browser-based poker game that showcases modern web technologies
 - Node.js
 - CSS
 
-[Project Link](samupietila.github.io/resume) | [GitHub Repository](#)
+[Project Link](https://samupietila.github.io/resume) | [GitHub Repository](#)
 
 ### Healthcare Center Queue Simulation
 
